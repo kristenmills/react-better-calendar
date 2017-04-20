@@ -17,6 +17,11 @@ webpackConfig.plugins = [
     root: process.cwd(),
     exclude: ['index.html'],
   }),
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify('production'),
+    },
+  }),
   new webpack.optimize.CommonsChunkPlugin({ name: ['vendor', 'manifest'], minChunks: Infinity }),
   new webpack.optimize.CommonsChunkPlugin({ async: true, minChunks: 2 }),
   new webpack.optimize.MinChunkSizePlugin({ minChunkSize: 8192 }),
