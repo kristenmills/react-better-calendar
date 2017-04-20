@@ -1,4 +1,4 @@
-# react-calendar (real name tbd)
+# react-better-calendar
 
 A calendar component using React.
 
@@ -7,7 +7,7 @@ A calendar component using React.
 In your project directory run
 
 ```
-npm install --save react-calendar
+npm install --save react-better-calendar
 ```
 
 And you should be ready to go
