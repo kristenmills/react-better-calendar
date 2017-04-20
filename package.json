@@ -1,8 +1,8 @@
 {
-  "name": "react-calendar",
-  "version": "1.0.0",
+  "name": "react-better-calendar",
+  "version": "0.0.0",
   "description": "A react calendar.",
-  "main": "lib/index.js",
+  "main": "lib/js/Calendar.js",
   "scripts": {
     "start": "webpack-dev-server --config demo/webpack.config.dev.js",
     "build:js": "babel src/js --out-dir lib/js",
