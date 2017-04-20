@@ -12,7 +12,7 @@ dependencies:
 test:
   pre: npm run lint
   override:
-    - NODE_ENV=production npm run build
+    - npm run build
 
 deployment:
   ghpages:
