@@ -23,3 +23,8 @@ deployment:
       - git config --global user.email "kristen@kristen-mills.com"
       - git config --global user.name "Kristen Mills"
       - NODE_ENV=production npm run deploy
+  npm:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - npm publish
+
