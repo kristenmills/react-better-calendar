@@ -1,6 +1,6 @@
 {
   "name": "react-better-calendar",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A react calendar.",
   "main": "lib/js/Calendar.js",
   "scripts": {
