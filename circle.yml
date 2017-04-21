@@ -1,7 +1,21 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+
 machine:
   node:
-    version: 6.1.0
+    version: 7.9.0
 
 test:
   override:
     - npm run build
+
+deployment:
+  ghpages:
+    branch: master
+    owner: kristenmills
+    commands:
+      - git config --global user.email "kristen@kristen-mills.com"
+      - git config --global user.name "Kristen Mills"
+      - NODE_ENV=production npm run deploy
