@@ -10,7 +10,7 @@
     "build": "npm run build:js && npm run build:css",
     "prepublish": "npm run build",
     "build:demo": "webpack --config demo/webpack.config.prod.js",
-    "deploy": "npm run build:demo && gh-pages -d demo/dist",
+    "deploy": "npm run build:demo && gh-pages -m 'Updating Demo [ci skip]' -d demo/dist",
     "lint": "eslint --ext .js --ext .jsx src demo/src"
   },
   "repository": {
