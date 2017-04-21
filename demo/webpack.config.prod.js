@@ -10,7 +10,7 @@ webpackConfig.entry.main = './demo/src/js/app.jsx';
 webpackConfig.output = {
   path: path.resolve('./demo/dist/assets'),
   filename: '[name].[chunkhash].js',
-  publicPath: 'react-calendar/assets/',
+  publicPath: '/react-better-calendar/assets/',
 };
 webpackConfig.plugins = [
   new CleanWebpackPlugin(['demo/dist'], {
