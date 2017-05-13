@@ -1,0 +1,2 @@
+export week from './WeekView';
+
