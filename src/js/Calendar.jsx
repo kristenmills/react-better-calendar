@@ -4,23 +4,26 @@ import moment from 'moment';
 
 import Header from './components/Header';
 import * as VIEWS from './views';
+import { week } from './constants/views';
+import mergeProps from './config';
 
 export default class Calendar extends Component {
 
   static propTypes = {
     defaultView: PropTypes.oneOf(Object.keys(VIEWS)),
     defaultDate: PropTypes.instanceOf(moment),
-    formats: PropTypes.object,
   };
 
   static defaultProps = {
-    defaultView: 'WEEK',
+    defaultView: week,
     defaultDate: moment(),
+    formats: {},
   };
 
   state = {
     View: VIEWS[this.props.defaultView],
     date: this.props.defaultDate,
+    config: mergeProps(this.props),
   };
 
   handleDateChange = (type) => {
@@ -29,11 +32,10 @@ export default class Calendar extends Component {
   }
 
   render() {
-    const { View, date } = this.state;
+    const { View, date, config } = this.state;
     return (
       <div className="react-better-calendar">
-        <Header onDateChange={this.handleDateChange} view={View} date={date} />
-        <View date={date} />
+        <Header onDateChange={this.handleDateChange} View={View} date={date} config={config} />
       </div>
     );
   }

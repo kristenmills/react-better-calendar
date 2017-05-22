@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export const NEXT = 'Next';
-export const PREV = 'Previous';
-export const TODAY = 'Today';
+import { NEXT, PREV, TODAY } from '../constants/date-selector';
 
 export default class DateSelector extends Component {
 
@@ -15,7 +13,7 @@ export default class DateSelector extends Component {
 
   render() {
     return (
-      <ul classNaame="date-selector">
+      <ul className="date-selector">
         <li className="date-selector--item">
           <button className="date-selctor--button" onClick={this.onDateChange(PREV)} >
             <i className="icon-prev" />

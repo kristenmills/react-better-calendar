@@ -10,15 +10,12 @@ export default class Header extends Component {
     onDateChange: PropTypes.func.isRequired,
     View: PropTypes.oneOf(Object.values(VIEWS)).isRequired,
     date: PropTypes.instanceOf(moment).isRequired,
-    formats: PropTypes.shape({
-      header: PropTypes.object,
-    }).isRequired,
+    config: PropTypes.object.isRequired,
   };
 
   display = () => {
-    const { View, date, format, config } = this.props;
-
-    const dateRange = View.dateRange(date, config);
+    const { View, date, config } = this.props;
+    return View.display(date, config);
   }
 
   render() {
@@ -26,11 +23,15 @@ export default class Header extends Component {
 
     return (
       <div className="header">
-        <DateSelector onDateChange={onDateChange} />
+        <div className="header--date-selector-wrapper">
+          <DateSelector onDateChange={onDateChange} />
+        </div>
         <h1 className="header--date">
           {this.display()}
         </h1>
-        <div className="view-selector" />
+        <div className="header--view-selector-wrapper" >
+          View Selector
+        </div>
       </div>
     );
   }

@@ -4,7 +4,7 @@
   "description": "A react calendar.",
   "main": "lib/js/Calendar.js",
   "scripts": {
-    "start": "webpack-dev-server --config demo/webpack.config.dev.js",
+    "start": "npm run storybook",
     "build:js": "babel src/js --out-dir lib/js",
     "build:css": "postcss -c postcss.config.js -o lib/css/Calendar.css src/css/Calendar.css",
     "build": "npm run build:js && npm run build:css",

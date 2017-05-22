@@ -1,6 +1,6 @@
 @import 'components';
 @import 'views';
 
-.calendar {
-
+.react-better-calendar {
+  font-family: sans-serif;
 }

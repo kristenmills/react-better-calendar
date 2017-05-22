@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center;
+}
+
+.header--date {
+  flex: 1;
+  text-align: center;
+}

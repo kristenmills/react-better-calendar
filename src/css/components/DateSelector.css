@@ -1,0 +1,8 @@
+.date-selector {
+  display: flex;
+  flex-direction: horizontal;
+
+  list-style: none;
+}
+
+
