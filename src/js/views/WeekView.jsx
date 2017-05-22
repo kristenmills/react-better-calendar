@@ -27,9 +27,9 @@ function dateRange(date, config) {
 }
 
 function display(date, config) {
-  const { start, end } = dateRange(date, config);
+  const range = dateRange(date, config);
 
-  return `${start.format(config.formats.week.header)} - ${end.format(config.formats.week.header)}`;
+  return config.formats.week.header(range, moment);
 }
 
 export default createView(dateRange, changeDate, display, week)(() => <div />);
